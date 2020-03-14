@@ -22,7 +22,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/webhook/', function (request, response) {
-  if (request.query['hub.verify_token'] === 'Nobroker_Labs') {
+  if (request.query['hub.verify_token'] === 'ally_labs') {
     response.send(request.query['hub.challenge'])
   }
   response.send('Error, wrong token')
